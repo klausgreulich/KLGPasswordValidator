@@ -29,7 +29,9 @@
 
 Type: integer
 
-The mimimum length the password must have. If the password is shorter an error is generated: PASSWORD_LENGTH:<length needed>.
+The mimimum length the password must have. If the password is shorter an error is generated:
+
+	PASSWORD_LENGTH:<length needed>.
 
 ### containsNumber
 
