@@ -1,0 +1,8 @@
+PASSWORD_LENGTH:Das Passwort muss mindestens %s Zeichen haben.
+PASSWORD_NOT_ENOUGH_NUMBERS:Das Passwort muss mindestens %s Zahlen beinhalten
+PASSWORD_NOT_ENOUGH_SPECIAL_CHARACTERS:Das Passwort muss mindestens %s Sonderzeichen enthalten.
+PASSWORD_CONTAINS_USERNAME:Das Passwort darf nicht den Benutzernamen enthalten.
+PASSWORD_CONTAINS_SUBSTRING:Das Passwort darf '%s' nicht enthalten.
+PASSWORD_IN_BLACKLIST:Dieses Passwort darf nicht verwendet werden.
+PASSWORD_PART_IN_BLACKLIST:Das Passwort darf das Wort '%s' nicht enthalten.
+

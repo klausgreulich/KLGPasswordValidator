@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Example</title>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+
+<style>
+	body {
+		position:relative;
+	}
+</style>
+
+<script>
+
+function checkPassword()
+{
+	$.post('test.php', { password: $('#password').val() }, function(data) {
+  		$('#result').html(data);
+	});
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Please enter a password:</h1>
+
+<div id="result" style="position:absolute; top:10px;left:600px;">
+
+</div>
+
+<input type="password" id="password" name="password" onkeyup="checkPassword();"/> 
+
+</body>
+</html>
