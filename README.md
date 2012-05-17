@@ -1,3 +1,11 @@
+# Live example
+
+Please see the example index.html in the
+
+	example
+	
+directory. Also the phpUnit test file might be helpful ...
+
 # Configuration
 
 ## Example
@@ -86,11 +94,5 @@ Array of substrings not allowed in the password. If one of the substrings is fou
 	
 	PASSWORD_CONTAINS_SUBSTRING:<substring found>
 
-## Live example
 
-Please see the example index.html in the
-
-	example
-	
-directory. Also the phpUnit test file might be helpful ...
 
