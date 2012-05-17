@@ -44,11 +44,29 @@ If true, the password must contain 1 number. If an integer (i.e. 3), then the pa
 ### containsSpecialCharacter
 
 If true, the password must contain 1 special character. If an integer (i.e. 3), then the password must contain this number of special characters. Otherwise an error is generated:
+	
 	PASSWORD_NOT_ENOUGH_SPECIAL_CHARACTERS:<count needed>
 
 ### rejectPreviousPasswords
 
+If this is set to true, the Password-Delegate will be called with the:
 
+	isPreviousPassword($password)
+	
+Method. The delegate will be responsible to handle this request. Usage:
+
+	$validator = new KLGPasswordValidator($passwordValidatorConfiguration);
+	$validator->setPasswordDelegate($someObject);
+	
+The object 
+
+	$someObject
+	
+is supposed to provide a method
+
+	public function isPreviousPassword($x)
+	
+Otherwise, an exception is thrown.
 
 ### rejectUsernameInPassword
 
