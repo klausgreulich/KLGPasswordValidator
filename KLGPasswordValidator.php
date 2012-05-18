@@ -121,7 +121,11 @@ class KLGPasswordValidator
 		$length = intval($length);
 		if ($length == 0) $length = 1;
 		
-		if (strlen(trim($this->password)) < $length) {
+		$passwordLength = strlen(trim($this->password));
+		
+		$this->score =  $passwordLength * 4;
+		
+		if ($passwordLength < $length) {
 			$this->errors[] = "PASSWORD_LENGTH:$length";
 		}
 	}
@@ -193,7 +197,7 @@ class KLGPasswordValidator
 			$minNumber = $validate;
 		}
 		
-		preg_match_all('/[|!@#$%&*\/=?,;.:\-_+~^¨\\\]/', $this->password, $results);
+		preg_match_all('/[|!@#$%&*\/=?,;.:\-_+~^¨<>()\[\]€{}`\'\\\]/', $this->password, $results);
 		
         if (!empty($results)) {
             $this->scoreSpecialCharactersCount = count($results[0]);
@@ -315,7 +319,7 @@ class KLGPasswordValidator
 		$length = strlen($this->password);
         for ($i = 2; $i <= 4; $i++) {
             $temp = str_split($this->password, $i);
-            $this->score -= ( ceil($length / $i) - count(array_unique($temp)));
+            //$this->score -= ( ceil($length / $i) - count(array_unique($temp)));
         }
     }
 	

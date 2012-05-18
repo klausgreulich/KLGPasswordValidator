@@ -446,7 +446,7 @@ class KLGPasswordValidatorTest extends PHPUnit_Framework_TestCase
     	
     	$score = $this->object->getScore();
     	
-    	$this->assertEquals($score,0);   	
+    	$this->assertEquals(14,$score);   	
  	}
     
     public function testScore2()
@@ -466,7 +466,7 @@ class KLGPasswordValidatorTest extends PHPUnit_Framework_TestCase
     	
     	$score = $this->object->getScore();
     	
-    	$this->assertEquals(15,$score);   	
+    	$this->assertEquals(51,$score);   	
  	}
  	
  	public function testScore3()
@@ -486,7 +486,7 @@ class KLGPasswordValidatorTest extends PHPUnit_Framework_TestCase
     	
     	$score = $this->object->getScore();
     	
-    	$this->assertEquals(65,$score);   	
+    	$this->assertEquals(100,$score);   	
  	}
  	
     /**
