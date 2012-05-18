@@ -357,7 +357,7 @@ class KLGPasswordValidatorTest extends PHPUnit_Framework_TestCase
     		'minimumLength' => 8,
 			'containsNumber' => 0,
 			'containsSpecialCharacter' => 0,
-			'rejectWordlist' => dirname(__FILE__).'/lower.lst',
+			'rejectWordlist' => dirname(__FILE__).'/blacklist.lst',
     	);
     		
         $this->object = new KLGPasswordValidator($configuration);
@@ -406,7 +406,7 @@ class KLGPasswordValidatorTest extends PHPUnit_Framework_TestCase
     		'minimumLength' => 8,
 			'containsNumber' => 0,
 			'containsSpecialCharacter' => 0,
-			'rejectWordlistSubstring' => dirname(__FILE__).'/lower.lst',
+			'rejectWordlistSubstring' => dirname(__FILE__).'/blacklist.lst',
     	);
     		
         $this->object = new KLGPasswordValidator($configuration);
